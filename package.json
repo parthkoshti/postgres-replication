@@ -1,0 +1,38 @@
+{
+  "name": "pg-pubsub",
+  "version": "1.0.0",
+  "description": "CLI + library to configure PostgreSQL logical replication between databases",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "bin": {
+    "pg-pubsub": "./dist/cli.cjs"
+  },
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf dist",
+    "dev": "tsx --watch src/cli.ts",
+    "check": "tsc --noEmit",
+    "start": "node dist/cli.js"
+  },
+  "dependencies": {
+    "commander": "^14.0.2",
+    "dotenv": "^8.2.0",
+    "inquirer": "^12.10.0",
+    "node-fetch": "^3.3.2",
+    "pg": "^8.13.0",
+    "pg-connection-string": "^2.9.1"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.9",
+    "@types/node": "^24.9.2",
+    "@types/pg": "^8.15.6",
+    "tsup": "^8.0.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
